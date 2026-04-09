@@ -31,9 +31,9 @@ BALANCE_METHODS = {
 }
 
 GROUPS = {
-    "🔼 Over-sampling": ["SMOTEENN (Over)", "BorderlineSMOTE (Over)", "RandomOverSampler (Over)"],
-    "🔽 Under-sampling": ["TomekLinks (Under)", "RandomUnderSampler (Under)", "NearMiss (Under)"],
-    "⚖️ Balance": ["SMOTETomek (Balance)", "SMOTEENN (Balance)"],
+    "Over-sampling": ["SMOTEENN (Over)", "BorderlineSMOTE (Over)", "RandomOverSampler (Over)"],
+    "Under-sampling": ["TomekLinks (Under)", "RandomUnderSampler (Under)", "NearMiss (Under)"],
+    "Balance": ["SMOTETomek (Balance)", "SMOTEENN (Balance)"],
 }
 
 @st.cache_data
@@ -277,7 +277,7 @@ elif page == "Sampling Visualization":
     df_proc = process_df(df_raw, target_col)
     x_train, x_test, y_train, y_test = get_splits(df_proc, target_col)
 
-    tab_over, tab_under, tab_bal = st.tabs(["🔼 Over-sampling", "🔽 Under-sampling", "⚖️ Balance"])
+    tab_over, tab_under, tab_bal = st.tabs(["Over-sampling", "Under-sampling", "Balance"])
 
     with tab_over:
         for m in GROUPS["Over-sampling"]:
@@ -295,7 +295,7 @@ elif page == "Sampling Visualization":
             st.divider()
 
 elif page == "Model":
-    st.title("🤖 Обучение модели")
+    st.title("Обучение модели")
     df_proc = process_df(df_raw, target_col)
 
     st.header("Параметры модели")
