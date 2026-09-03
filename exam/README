@@ -1,1 +1,3 @@
 Here are all materials for exam
+--
+For article: the dataset used is BCI Competition III, Dataset II (open access). Download: https://github.com/Manucar/p300-speller/tree/main/dataset (4 .rar files → unpack → 4 .mat files). Original source: https://www.bbci.de/competition/iii/
